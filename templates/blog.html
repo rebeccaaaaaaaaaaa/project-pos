@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+   <div class="container">
+       <div class="row">
+        {% for blog_item in blog_item_list %}
+        <div class="blog-post">
+            <h2 class="blog-post-title">{{ blog_item.title }}</h2>
+        </div>
+    {% endfor %}
+       </div>
+   </div>
+{% endblock%}

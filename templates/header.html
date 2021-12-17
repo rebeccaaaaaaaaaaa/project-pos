@@ -1,0 +1,31 @@
+{% load static %}
+<header>
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-between mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+              <img src="{% static 'images/logo.png' %}" alt="logo" class="img-fluid" width="66px" height="100px" />
+          </a>
+    
+          <ul class="nav desk-menu">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">PÁGINA INICIAL</a></li>
+            <li class="nav-item"><a href="{% url 'about'  %}" class="nav-link">SOBRE NÓS</a></li>
+            <li class="nav-item"><a href="{% url 'team'  %}" class="nav-link">EQUIPE</a></li>
+            <li class="nav-item"><a href="{% url 'blog'  %}" class="nav-link">BLOG</a></li>
+            <li class="nav-item"><a href="{% url 'contact'  %}" class="nav-link">CONTATO</a></li>
+            <li class="nav-item"><a href="#" class="nav-link btn-login">AREA DO ALUNO</a></li>
+          </ul>
+
+          <div class="mobile-menu">
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="#">PÁGINA INICIAL</a>
+              <a href="#">SOBRE NÓS</a>
+              <a href="#">EQUIPE</a>
+              <a href="#">CONTATO</a>
+              <a href="#" class="btn-login">AREA DO ALUNO</a>
+            </div>
+            <span style="font-size:30px;cursor:pointer;position:relative;top:10px;" onclick="openNav()">&#9776;</span>
+          </div>
+        </div>
+      </div>
+</header>
