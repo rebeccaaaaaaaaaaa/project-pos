@@ -1,13 +1,20 @@
 {% extends 'base.html'%}
 {% load static %}
 {% block content %}
-   <div class="container">
-       <div class="row">
-        {% for blog_item in blog_item_list %}
-        <div class="blog-post">
-            <h2 class="blog-post-title">{{ blog_item.title }}</h2>
-        </div>
-    {% endfor %}
+   
+       <div class="container">
+           <div class="row">
+            {% for post in post_list %}
+            <div class="col-lg-4">
+                <article class="post post-{{ post.pk }}">
+                    <header class="entry-header">
+                        <h1 class="entry-title">
+                            <a href="">{{ post.title }}</a>
+                        </h1>
+                </article>
+            </div>
+            {% endfor %}
+           </div>
        </div>
-   </div>
+
 {% endblock%}
