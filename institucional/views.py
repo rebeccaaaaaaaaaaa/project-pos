@@ -24,15 +24,18 @@ class BlogView(ListView):
     model = BlogItem
     template_name = 'blog.html'
     context_object_name = 'post_list'
-    paginate_by = 5
     
+
     def get_context_data(self, **kwargs):
         context = super(BlogView, self).get_context_data(**kwargs)
         context['title'] = 'Blog'
-        paginators = context.get('paginator')
-        page = context.get('page_obj')
-        is_paginated = context.get('is_paginated')
-        pagination_data = self.pagination_data(paginators, page, is_paginated)
-        context.update(pagination_data)
         return context
     
+class BlogDetailView(generic.DetailView):
+    model = BlogItem
+
+def detail(request, primary_key):
+    post = get_object_or_404(BlogItem, pk=primary_key)
+    return render(request, 'detail.html', context={'post': post})
+
+

@@ -6,10 +6,10 @@
            <div class="row">
             {% for post in post_list %}
             <div class="col-lg-4">
-                <article class="post post-{{ post.pk }}">
+                <article class="post post-{{ post.id }}">
                     <header class="entry-header">
                         <h1 class="entry-title">
-                            <a href="">{{ post.title }}</a>
+                            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
                         </h1>
                 </article>
             </div>

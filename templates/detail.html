@@ -1,4 +1,5 @@
+{% extends "base.html" %}
 
-    <article class="post post-{{ post.pk }}">
-        <h1 class="entry-title">{{ post.title }}</h1>
-    </article>
+{% block content %}
+  <h1>Title: {{ post.title }}</h1>
+{% endblock %}
