@@ -5,6 +5,46 @@ body{
     
 }
 
+
+.breadcrumb-bg{
+    background-color: #86B8D8
+}
+
+.currrent{
+  color: #fff;
+  font-weight: bold;
+}
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: #fff;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
 /* HEADER STYLES */
 
 .mobile-menu{
@@ -85,7 +125,7 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  top: -24px;
+  top: 0;
   display: flex;
   align-items: center;
 }
@@ -543,7 +583,7 @@ button.slick-prev:hover {
 
 .advantages{
   background: #F5F5F5;
-  margin-top: -2rem;
+  margin-top: 0;
 }
 
 .feature  h2{
