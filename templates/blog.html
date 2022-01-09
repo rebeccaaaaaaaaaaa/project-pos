@@ -3,18 +3,19 @@
 {% block content %}
    
        <div class="container">
-           <div class="row">
+           <div class="row py-5">
             {% for post in post_list %}
             <div class="col-lg-4">
-                <article class="post post-{{ post.id }}">
-                    <header class="entry-header">
-                        <h1 class="entry-title">
-                            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-                        </h1>
-                </article>
+                <div class="card post post-{{ post.id }}" style="width: 18rem;">
+                    <img src={{post.image.url}} class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p class="card-text">{{post.body}}</p>
+                    <a href="{{ post.get_absolute_url }}">Ver mais</a>
+                    </div>
+                </div>
             </div>
             {% endfor %}
            </div>
        </div>
-
 {% endblock%}
