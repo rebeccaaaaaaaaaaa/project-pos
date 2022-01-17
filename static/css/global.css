@@ -194,7 +194,7 @@ footer .hours{
 /* CALL TO ACTION */
 
 .cta{
-  background: #86B8D8;
+  background: #65aeb9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,17 +206,17 @@ footer .hours{
   padding-top: 4rem;
 }
 .cta-content--btn a{
-  text-decoration: none;
-  background: #55a7db;
+  background: #ffffff;
   padding: 10px 20px;
   border-radius: 50px;
-  color: #fff;
+  color: #65aeb9;
   box-shadow: 0px 3px 6px #00000016;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .cta-content--btn a:hover{
-  background: #62A4CE;
+  background: #ffffff;
 }
 
 .cta h1{
@@ -263,7 +263,6 @@ button.slick-next:hover {
   right: 54px;
   width: 47px;
   height: 75px;
-  background-image: url("http://maggiesadler.com/wp-content/uploads/2015/10/left-right-arrow.png");
   background-size: 95px;
 }
 button.slick-prev,
@@ -274,7 +273,6 @@ button.slick-prev:hover {
   z-index: 1;
   width: 47px;
   height: 75px;
-  background-image: url("http://maggiesadler.com/wp-content/uploads/2015/10/left-right-arrow.png");
   background-size: 95px;
   background-position-x: right;
 }
@@ -541,6 +539,12 @@ button.slick-prev:hover {
 
 .testimonials{
   background-image: url(../images/bg-testimonials.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+
 }
 
 .testimonials h2{
@@ -558,7 +562,7 @@ button.slick-prev:hover {
 
 .slider-item{
   background: #fff;
-  padding: 1rem;
+  padding: 3rem;
 }
 
 .slider-item h1{
@@ -617,6 +621,12 @@ button.slick-prev:hover {
   font-weight: normal;
   margin-top: 1rem;
   text-align: left;
+}
+
+.post .card-img-top{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .blog a{
