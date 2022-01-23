@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from blog.models import BlogItem
 from django.views.generic import ListView, DetailView
+from django.core.paginator import Paginator
 
 def index(request):
     return render(request, 'index.html')
@@ -16,8 +17,14 @@ def team(request):
     return render(request, 'team.html')
 
 def blog(request):
+    #post_list = BlogItem.objects.all()
     post_list = BlogItem.objects.all()
-    return render(request, 'blog.html', context={'post_list': post_list})
+    paginator = Paginator(post_list, 1)
+    page = request.GET.get('blog')
+    posts = paginator.get_page(page)
+    
+
+    return render(request, 'blog.html', context={'post_list': post_list, 'posts': posts})
 
 
 class BlogView(ListView):
