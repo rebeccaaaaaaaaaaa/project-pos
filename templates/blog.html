@@ -14,12 +14,13 @@
        <div class="container py-5">
            <div class="row py-5">
             {% for post in post_list %}
-            <div class="col-lg-3 col-xs-12 col-md-6 col-sm-12">
+            <div class="col-lg-3 col-xs-12 col-md-6 col-sm-12 py-4">
                 <div class="card py-3 post post-{{ post.id }}">
                     <img src={{post.image.url}} class="card-img-top" alt="...">
                     <div class="card-body">
                     <h5 class="card-title">{{ post.title }}</h5>
-                    <a href="{{ post.get_absolute_url }}">Ver mais</a>
+                    <p class="card-description">{{post.body|slice:":20" }}</p>
+                    <a href="{% url 'post_detail' post.pk  %}">Ver mais</a>
                     </div>
                 </div>
             </div>

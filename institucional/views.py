@@ -31,11 +31,9 @@ class BlogView(ListView):
         context['title'] = 'Blog'
         return context
     
-class BlogDetailView(generic.DetailView):
-    model = BlogItem
 
-def detail(request, primary_key):
-    post = get_object_or_404(BlogItem, pk=primary_key)
-    return render(request, 'detail.html', context={'post': post})
+class PostDetail(generic.DetailView):
+    model = BlogItem
+    template_name = 'post_detail.html'
 
 
