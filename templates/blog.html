@@ -11,38 +11,24 @@
        </div>
      </div>
    
-       <div class="container py-5">
+       <div class="container py-5 blog">
            <div class="row py-5">
             {% for post in post_list %}
             <div class="col-lg-3 col-xs-12 col-md-6 col-sm-12 py-4">
                 <div class="card py-3 post post-{{ post.id }}">
-                    <img src={{post.image.url}} class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">{{ post.title }}</h5>
-                    <p class="card-description">{{post.body|slice:":20" }}</p>
-                    <a href="{% url 'post_detail' post.pk  %}">Ver mais</a>
-                    </div>
+                    <a href="{% url 'post_detail' post.pk  %}">
+                        <img src={{post.image.url}} class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ post.title }}</h5>
+                            <p class="card-description">{{post.body|slice:":20" }}</p>
+                           
+                        </div>
+                    </a>
                 </div>
             </div>
             {% endfor %}
            </div>
        </div>
-
-       <div class="pagination">
-        <span class="step-links">
-            {% if posts.has_previous %}
-                <a href="?page={{ posts.previous_page_number }}">Anterior</a>
-            {% endif %}
-        
-            <span class="current">
-                {{ posts.number }} de {{ posts.paginator.num_pages }}
-            </span>
-        
-            {% if posts.has_next %}
-                <a href="?page={{ posts.next_page_number }}">Próxima</a>
-            {% endif %}
-        </span>
-    </div>
 
     
 {% endblock%}

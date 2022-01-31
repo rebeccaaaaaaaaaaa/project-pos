@@ -627,11 +627,28 @@ button.slick-prev:hover {
   height: 200px;
   width: 100%;
   object-fit: cover;
+  transition: all 1s;
+}
+
+.blog .card{
+  overflow: hidden;
+}
+
+.blog .card-body{
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.post .card-img-top:hover{
+  transform: scale(1.2);
 }
 
 .blog a{
   text-decoration: none;
   color: #353535;
+
+  display: block;
+  overflow: hidden;
 }
 
 .show-more-blog{
@@ -643,6 +660,20 @@ button.slick-prev:hover {
   font-size: 14px;
 
 }
+
+.blog a {
+  text-decoration: none;
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+
 
 .feature:hover,
 .item-blog:hover {

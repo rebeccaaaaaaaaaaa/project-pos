@@ -17,20 +17,16 @@ def team(request):
     return render(request, 'team.html')
 
 def blog(request):
-    #post_list = BlogItem.objects.all()
     post_list = BlogItem.objects.all()
-    paginator = Paginator(post_list, 1)
-    page = request.GET.get('blog')
-    posts = paginator.get_page(page)
-    
 
-    return render(request, 'blog.html', context={'post_list': post_list, 'posts': posts})
+    return render(request, 'blog.html', context={'post_list': post_list})
 
 
 class BlogView(ListView):
     model = BlogItem
     template_name = 'blog.html'
     context_object_name = 'post_list'
+
     
 
     def get_context_data(self, **kwargs):
