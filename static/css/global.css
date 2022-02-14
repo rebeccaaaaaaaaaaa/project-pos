@@ -18,6 +18,7 @@ body{
 ul.breadcrumb {
   padding: 10px 16px;
   list-style: none;
+  margin: unset;
 }
 
 /* Display list items side by side */
@@ -690,6 +691,37 @@ button.slick-prev:hover {
 /* END ADVANTAGES */
 
 
+/* CONTACT */
+.contact-page{
+  background-image: url(../images/hero-bg.jpg);
+  height: 45rem;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.contact-wrapper{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 3rem;
+  background: #ffffffd9;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.whatsapp-button{
+  background-color: #25D366;
+  color: white; 
+}
+
+.instagram-button{
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  border: unset;
+  color: white; 
+}
+
+
 /* team */
 
 .social-link {
@@ -725,6 +757,14 @@ button.slick-prev:hover {
     .mobile-menu{
         display: block;
     }
+
+    .offset-7{
+        margin-left: 0;
+    }
+
+    .contact-wrapper {
+      padding: 2rem 0rem;
+  }
 
     .banner-hero--text h1 {
       font-size: 30px;
